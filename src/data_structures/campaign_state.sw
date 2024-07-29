@@ -1,7 +1,6 @@
 library;
 
 use core::ops::Eq;
-use core::cmp::PartialEq;
 
 /// Represents the current state of the campaign.
 pub enum CampaignState {
@@ -13,8 +12,8 @@ pub enum CampaignState {
     pub Progress: (),
 }
 
-impl PartialEq for CampaignState {
-    fn eq(&self, other: &Self) -> bool {
+impl Eq for CampaignState {
+    fn eq(self, other: CampaignState) -> bool {
         match (self, other) {
             (CampaignState::Cancelled, CampaignState::Cancelled) => true,
             (CampaignState::Successful, CampaignState::Successful) => true,
