@@ -1,0 +1,5 @@
+Contract petition-contract Deployed!
+
+Network: https://testnet.fuel.network
+Contract ID: 0x6f750eba9cd5bb45ba2b3a3930788715c32ebce37a596a4e3438ea04f8e5a4a4
+Deployed in block 00622545
