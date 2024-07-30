@@ -1,11 +1,9 @@
 library;
-
 /// Used to track the campaigns that a user has created.
 pub struct Campaign {
     /// The unique identifier for the campaign.
-    pub id: u64,
+    id: u64,
 }
-
 impl Campaign {
     /// Creates a new campaign.
     ///

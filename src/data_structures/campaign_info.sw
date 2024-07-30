@@ -1,19 +1,21 @@
 library;
-
 use ::data_structures::campaign_state::CampaignState;
 
-/// General data structure containing information about a campaign.
+// General data structure containing information about a campaign.
 pub struct CampaignInfo {
     /// The user who has created the campaign.
-    pub author: Identity,
-    // Whether the campaign is currently: in-progress, successful, Cancelled.
-    pub state: CampaignState,
+    author: Identity,
+    // Whether the campaign is currently: in progress, successful, or Canceled.
+    state: CampaignState,
     /// The end time for the campaign after which it becomes locked.
-    pub deadline: u64,
+    deadline: u64,
     /// Total amount of signs received
-    pub total_signs: u64,
+    total_signs: u64,
 }
-
+pub enum Identity {
+    Address: Address,
+    ContractId: ContractId,
+}
 impl CampaignInfo {
     /// Creates a new campaign.
     ///
